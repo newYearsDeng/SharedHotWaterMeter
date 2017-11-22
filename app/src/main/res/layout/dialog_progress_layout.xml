@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="20px"
+    android:paddingLeft="60px"
+    android:paddingRight="60px"
+    android:paddingTop="40px"
+    android:alpha="0.8"
+    android:background="@drawable/dialog_corners">
+
+    <ImageView
+        android:id="@+id/refreshing_img"
+        android:layout_width="80px"
+        android:layout_height="80px"
+        android:layout_centerInParent="true"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/default_ptr_rotate" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        />
+</LinearLayout>

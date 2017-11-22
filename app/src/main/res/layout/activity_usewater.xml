@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/new_head_back">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical">
+        <ImageView
+            android:id="@+id/button_back"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:gravity="center"
+            android:src="@drawable/selector_back_style"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            android:text="用水明细"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/new_little_gray"/>
+
+    <com.andview.refreshview.XRefreshView
+        android:id="@+id/xRefreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/new_main_back">
+
+        <ListView
+            android:id="@+id/listview_chage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:dividerHeight="0px"
+            android:layerType="software"
+            android:scrollbarSize="1px"
+            android:scrollbarThumbVertical="@color/new_little_gray"
+            android:divider="@null"
+
+            />
+
+    </com.andview.refreshview.XRefreshView>
+
+
+
+</LinearLayout>

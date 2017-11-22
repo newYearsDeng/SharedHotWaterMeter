@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <RelativeLayout 
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:background="@color/colorPrimary"
+        >
+        <TextView 
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/white"
+            android:textSize="35px"
+            android:text="确定"
+            android:gravity="center"
+            />
+        <TextView 
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"   
+            android:textColor="@android:color/white"
+            android:textSize="35px"
+            android:text="取消"
+            android:gravity="center"
+            />
+        
+    </RelativeLayout>
+    
+    <ListView
+        android:background="@color/white"
+        android:id="@+id/device_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        />
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="300px"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_no_data"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/ligth_gray"
+            android:text="No Device"
+            android:layout_marginTop="20px"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

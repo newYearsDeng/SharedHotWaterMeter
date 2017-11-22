@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="recycler_view_bg_normal">#ffffff</color>
+    <color name="recycler_view_bg_press">#11000000</color>
+
+    <!--titleBar color -->
+    <color name="title_bar_text_press_color" >#b6b6b5</color>
+    <color name="title_bar_text_normal_color" >#ffffff</color>
+
+    <color name="regist_problem_bg_press_color" >#11000000</color>
+    <color name="regist_problem_bg_normal_color" >#ffffff</color>
+
+    <color name="background_gray">#eeeeef</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="window_gray">#f4f4f4</color>
+    <color name="primary_text">#ffffff</color>
+    <color name="secondary_text">#ffffff</color>
+    <color name="white">#F5F5F5</color>
+    <color name="black">#000</color>
+    <color name="black_30">#30000000</color>
+    <color name="black_20">#20000000</color>
+    <color name="txt_gray">#999999</color>
+    <color name="bag_gray_transparent">#00FFFFFF</color>
+    <color name="text_color_context">#666666</color><!-- 字体颜色  标题灰色 -->
+    <color name="text_color_title">#333333</color><!-- 字体颜色  标题灰色 -->
+    <color name="text_color_qianhui">#999999</color><!-- 字体颜色  标题灰色 -->
+    <color name="title_bag">#e84d34</color>
+    <color name="text_color_golden">#fe6925</color>
+    <color name="title_top_alpha">#90333333</color><!--标题黑色半透明-->
+    <color name="gray">#a9b7b7</color>
+    <color name="activity_bg_color">#EEEEEE</color>
+
+    <color name="theme_color">#ff42464a</color>
+    <color name="bg_gray">#fff6f6f6</color>
+    <color name="ligth_gray">#ff949494</color>
+    <color name="device_name_gray">#ff757575</color>
+    <color name="hing_gray">#ff8a8a8a</color>
+
+    <color name="tab_color">#EAEAEA</color>
+    <color name="back_color">#CBCBCB</color>
+    <color name="main_color">#00B1EB</color>
+
+
+    <!--界面底色-->
+    <color name="new_main_back">#F5F5F5</color>
+    <!--浅灰色-->
+    <color name="new_little_gray">#BFBFBF</color>
+    <!--深灰色-->
+    <color name="new_dark_gray">#383838</color>
+    <!--红色字及红色图标-->
+    <color name="new_red">#F95312</color>
+    <!--版头底色-->
+    <color name="new_head_back">#F0F0F0</color>
+    <!--部分按键及字体颜色-->
+    <color name="new_text_back">#4462A4</color>
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170px"
+    android:paddingTop="20px"
+    android:paddingBottom="20px"
+    android:paddingLeft="20px"
+    android:paddingRight="20px"
+    android:gravity="center_vertical"
+    android:background="@color/new_main_back"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/black"
+            android:textSize="37px"
+            />
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/new_red"
+            android:textSize="37px"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="0.8"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/new_little_gray"
+            android:textSize="25px" />
+        <TextView
+            android:id="@+id/tv_4"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/new_little_gray"
+            android:textSize="25px"
+            />
+    </LinearLayout>
+
+</LinearLayout>

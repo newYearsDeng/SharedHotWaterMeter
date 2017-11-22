@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+                <!-- Customize your theme here. -->
+                <item name="android:windowContentOverlay">@null</item>
+                <item name="windowActionBar">false</item>
+                <item name="android:windowNoTitle">true</item>
+                <item name="colorPrimary">@color/colorPrimary</item>
+                <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                <item name="android:textColorPrimary">@android:color/white</item>
+                <item name="android:windowTranslucentStatus">true</item>
+                <item name="android:windowTranslucentNavigation">false</item>
+                <item name="toolbarStyle">@style/ToolBarStyle</item>
+        </style>
+        <style name="ToolBarStyle" parent="Widget.AppCompat.Toolbar">
+                <!--左边边距-->
+                <item name="contentInsetStart">0dp</item>
+        </style>
+        <style name="welcomeTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+                <item name="colorPrimary">@color/colorPrimary</item>
+                <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                <item name="android:textColorPrimary">@android:color/white</item>
+                <item name="android:windowContentOverlay">@null</item>
+                <item name="windowActionBar">false</item>
+                <item name="android:windowNoTitle">true</item>
+                <item name="android:fitsSystemWindows">true</item>
+                <item name="android:windowTranslucentNavigation">true</item>
+                <item name="android:windowBackground">@drawable/main_filsh_back</item>
+        </style>
+</resources>

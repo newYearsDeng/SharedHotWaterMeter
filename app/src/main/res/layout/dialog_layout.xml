@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/transparent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/new_main_back"
+        android:gravity="top">
+
+        <TextView
+            android:id="@+id/textview_1"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/new_little_gray"
+            android:text="确定注销该账号吗" />
+        <View
+            android:id="@+id/view_1"
+            android:layout_below="@+id/textview_1"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:background="@color/new_little_gray"
+            />
+
+        <TextView
+            android:id="@+id/tv_submit"
+            android:layout_below="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:textSize="21sp"
+            android:textColor="@color/new_text_back"
+            android:text="退出登录" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20px"
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/new_main_back"
+        android:gravity="top">
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:gravity="center"
+            android:textSize="21sp"
+            android:textColor="@color/new_dark_gray"
+            android:text="取消" />
+    </RelativeLayout>
+
+</LinearLayout>
