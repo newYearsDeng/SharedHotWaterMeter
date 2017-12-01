@@ -2,6 +2,7 @@ package com.northmeter.sharedhotwatermeter.northmeter.activity;
 
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -29,6 +30,9 @@ import com.northmeter.sharedhotwatermeter.northmeter.I.IShowUserCenterMessage;
 import com.northmeter.sharedhotwatermeter.northmeter.helper.ObservableScrollView;
 import com.northmeter.sharedhotwatermeter.northmeter.helper.StatusBarCompat;
 import com.northmeter.sharedhotwatermeter.northmeter.presenter.UserCenterPresenter;
+import com.northmeter.sharedhotwatermeter.northmeter.updata.Download;
+import com.northmeter.sharedhotwatermeter.northmeter.updata.NetworkUtil;
+import com.northmeter.sharedhotwatermeter.northmeter.updata.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -199,27 +203,46 @@ public class UserCenter extends BaseActivity implements AdapterView.OnItemClickL
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         switch (position) {
-            case 0:
+            case 0://我的用水
                 Intent intent_0 = new Intent(UserCenter.this, UseWaterActivity.class);
                 intent_0.putExtra("TEL", telNum);
                 startActivity(intent_0);
                 break;
-            case 1:
+            case 1://我的消息
                 break;
-            case 2:
+            case 2://用户指南
                 startActivity(new Intent(this, UserGuideActivity.class));
                 break;
-            case 3:
+            case 3://用户指南
                 break;
-            case 4:
+            case 4://建议
                 break;
-            case 5:
+            case 5://版本更新
+                if(true){
+                    int i = NetworkUtil.checkedNetWorkType(this);
+                    if(i == NetworkUtil.NOWIFI){
+                        ToastUtils.showToast(this,"没有WIFI");
+                    }else if(i == NetworkUtil.WIFI){
+                        ToastUtils.showToast(this,"有WIFI");
+                        final ProgressDialog pd; // 进度条对话框
+                        pd = new ProgressDialog(this);
+                        pd.setCancelable(true);// 必须一直下载完，不可取消
+                        pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+                        pd.setMessage("正在下载安装包，请稍后");
+                        pd.setTitle("版本升级");
+                        pd.show();
+                        new Download(pd).start();
+                    }
+                }else{
+                    //无新本
+                    ToastUtils.showToast(this,"该版本已经是最新版本");
+                }
                 break;
-            case 6:
+            case 6://二维码下载
                 break;
-            case 7:
+            case 7://关于我们
                 break;
-            case 8:
+            case 8://注销
                 dialog_show();
                 break;
         }
