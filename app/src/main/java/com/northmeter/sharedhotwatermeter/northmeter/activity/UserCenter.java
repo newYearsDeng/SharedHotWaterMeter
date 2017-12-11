@@ -224,14 +224,15 @@ public class UserCenter extends BaseActivity implements AdapterView.OnItemClickL
                         ToastUtils.showToast(this,"没有WIFI");
                     }else if(i == NetworkUtil.WIFI){
                         ToastUtils.showToast(this,"有WIFI");
-                        final ProgressDialog pd; // 进度条对话框
-                        pd = new ProgressDialog(this);
-                        pd.setCancelable(true);// 必须一直下载完，不可取消
-                        pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-                        pd.setMessage("正在下载安装包，请稍后");
-                        pd.setTitle("版本升级");
-                        pd.show();
-                        new Download(pd).start();
+//                        final ProgressDialog pd; // 进度条对话框
+//                        pd = new ProgressDialog(this);
+//                        pd.setCancelable(true);// 必须一直下载完，不可取消
+//                        pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+//                        pd.setMessage("正在下载安装包，请稍后");
+//                        pd.setTitle("版本升级");
+//                        pd.show();
+//                        new Download(pd).start();
+                        NetworkUtil.downLoadApk(this);
                     }
                 }else{
                     //无新本

@@ -1,8 +1,13 @@
 package com.northmeter.sharedhotwatermeter.northmeter.updata;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Handler;
+import android.os.Message;
+
+import java.io.File;
 
 /**
  * 网络检查
@@ -60,4 +65,40 @@ public class NetworkUtil {
 		}
 		return true;
 	}
+
+	public static void downLoadApk(final Context mContext) {
+		final ProgressDialog pd =  new ProgressDialog(mContext); // 进度条对话框
+
+		final Handler handler = new Handler() {
+			public void handleMessage(Message msg) {
+				super.handleMessage(msg);
+				int i = msg.what;
+				pd.setProgress(i);
+			}
+		};
+
+		pd.setCancelable(false);// 必须一直下载完，不可取消
+		pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+		pd.setMessage("正在下载安装包，请稍后");
+		pd.setTitle("版本升级");
+		pd.show();
+		new Thread() {
+			@Override
+			public void run() {
+				try {
+//					File file = downloadFile(downURL,appName, pd);
+					for(int i=0;i<100;i++){
+						handler.sendEmptyMessage(i);
+						sleep(500);
+					}
+					// 结束掉进度条对话框
+					pd.dismiss();
+				} catch (Exception e) {
+					pd.dismiss();
+
+				}
+			}
+		}.start();
+	}
+
 }

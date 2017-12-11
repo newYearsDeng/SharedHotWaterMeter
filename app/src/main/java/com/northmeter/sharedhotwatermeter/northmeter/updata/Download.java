@@ -66,7 +66,7 @@ public class Download extends Thread{
             is.close();
             return file;
         } else {
-            throw new IOException("未发现有SD卡");
+            throw new IOException("未发现SD卡");
         }
     }
 
