@@ -87,7 +87,7 @@ public class NetworkUtil {
 			public void run() {
 				try {
 					//sleep(500);
-					Download.sendPD(handler);
+					Download.setProgress(handler);
 					// 结束掉进度条对话框
 					pd.dismiss();
 				} catch (Exception e) {

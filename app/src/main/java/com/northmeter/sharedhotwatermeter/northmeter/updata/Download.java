@@ -80,7 +80,7 @@ public class Download extends Thread{
         context.startActivity(install);
     }
 
-    public static void sendPD(Handler handler){
+    public static void setProgress(Handler handler){
         for(int i=0;i<100;i++){
             try {
                 sleep(500);
