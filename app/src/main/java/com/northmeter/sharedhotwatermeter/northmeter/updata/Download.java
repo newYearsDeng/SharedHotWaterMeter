@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
+import android.os.Handler;
 
 import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -47,6 +49,7 @@ public class Download extends Thread{
             String fileName = Environment.getExternalStorageDirectory()
                     + appName+".apk";
             File file = new File(fileName);
+
             // 目录不存在创建目录
             if (!file.getParentFile().exists())
                 file.getParentFile().mkdirs();
@@ -75,6 +78,18 @@ public class Download extends Thread{
         install.setDataAndType(uri, "application/vnd.android.package-archive");
         install.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(install);
+    }
+
+    public static void sendPD(Handler handler){
+        for(int i=0;i<100;i++){
+            try {
+                sleep(500);
+                handler.sendEmptyMessage(i);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
 }

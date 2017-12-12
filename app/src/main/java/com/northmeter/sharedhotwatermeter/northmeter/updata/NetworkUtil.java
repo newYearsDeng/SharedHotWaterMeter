@@ -86,11 +86,8 @@ public class NetworkUtil {
 			@Override
 			public void run() {
 				try {
-//					File file = downloadFile(downURL,appName, pd);
-					for(int i=0;i<100;i++){
-						handler.sendEmptyMessage(i);
-						sleep(500);
-					}
+					//sleep(500);
+					Download.sendPD(handler);
 					// 结束掉进度条对话框
 					pd.dismiss();
 				} catch (Exception e) {
