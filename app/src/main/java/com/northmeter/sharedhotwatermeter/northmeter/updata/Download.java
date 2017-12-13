@@ -20,23 +20,25 @@ import java.net.URL;
  * Created by dyd on 2017/12/1.
  */
 public class Download extends Thread{
-    ProgressDialog pd;
+    public ProgressDialog pd;
+    public Handler handler;
 
-    public Download(ProgressDialog pd){
+    public Download(ProgressDialog pd,Handler handler){
         this.pd = pd;
+        this.handler = handler;
     }
 
     @Override
     public void run() {
         super.run();
         try {
-            downloadFile("","",pd);
+            downloadFile("","",pd,handler);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private static File downloadFile(String path, String appName , ProgressDialog pd) throws Exception {
+    private static File downloadFile(String path, String appName , ProgressDialog pd,Handler handler) throws Exception {
         // 如果相等的话表示当前的sdcard挂载在手机上并且是可用的
         if (Environment.MEDIA_MOUNTED.equals(Environment
                 .getExternalStorageState())) {
@@ -62,6 +64,7 @@ public class Download extends Thread{
                 fos.write(buffer, 0, len);
                 total += len;
                 // 获取当前下载量
+                handler.sendEmptyMessage(total);
                 pd.setProgress(total);
             }
             fos.close();
